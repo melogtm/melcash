@@ -10,7 +10,7 @@ import org.melogtm.melcash.enums.ClientType;
 @Setter
 @Entity
 @Table(name = "users")
-public class AbstractClient {
+public class Client {
 
     @Id
     @GeneratedValue
@@ -32,7 +32,7 @@ public class AbstractClient {
     @Column(name = "type", nullable = false)
     private ClientType type;
 
-    public AbstractClient(String name, String cpf, String email, String password, ClientType type) {
+    public Client(String name, String cpf, String email, String password, ClientType type) {
         this.name = name;
         this.cpf = cpf;
         this.email = email;
