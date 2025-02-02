@@ -32,12 +32,18 @@ public class Client {
     @Column(name = "type", nullable = false)
     private ClientType type;
 
-    public Client(String name, String cpf, String email, String password, ClientType type) {
+    @Column(name = "cash")
+    private Double cash;
+
+    public Client(String name, String cpf, String email,
+                  String password, ClientType type,
+                  Double cash) {
         this.name = name;
         this.cpf = cpf;
         this.email = email;
         this.password = password;
         this.type = type;
+        this.cash = cash;
     }
 
 }

@@ -35,8 +35,18 @@ public class ClientService {
                 clientRequest.cpf(),
                 clientRequest.email(),
                 clientRequest.password(),
-                myType);
+                myType,
+                clientRequest.cash()
+        );
 
         repository.save(client);
+    }
+
+    public void addCash(Client client, Double value) {
+        repository.addCash(client.getId(), value);
+    }
+
+    public void removeCash(Client client, Double value) {
+        repository.removeCash(client.getId(), value);
     }
 }
